@@ -1,0 +1,82 @@
+---
+  - hosts: puppets
+    gather_facts: True
+    tasks:
+      - name: Check and Change the hostname of puppets
+        hostname: 
+          name="{{ inventory_hostname  }}"
+        when:
+          ansible_hostname != ansible_ssh_host
+
+      - name: Fix /etc/hosts removing old hostnames
+        tags:
+         - hosts
+        lineinfile:
+          state=present
+          dest=/etc/hosts
+          line="{{ ansible_default_ipv4.address }} {{ inventory_hostname }} {{ ansible_hostname }}"
+        when:
+          ansible_hostname != inventory_hostname
+
+      - name: Validate hostnames match invetory names
+        tags:
+          - validate
+        assert:
+          that:
+            ansible_hostname == inventory_hostname
+
+  - hosts: all
+    vars:
+      puppet1dev: puppet1dev
+      puppet1devpass: ""
+      puppet2dev: puppet2dev
+      puppet2pass: ""
+
+    vars_prompt:
+      
+      - name: puppet1dev
+        prompt: "What is puppet1 dev username?"
+        private: no
+
+      - name: puppet1devpass
+        prompt: "Enter password for {{ puppet1dev }}"
+        private: no
+
+      - name: puppet2dev
+        prompt: "What is puppet2 dev username?"
+        private: no
+
+      - name: puppet2devpass
+        prompt: "Enter password for {{ puppet2dev }}"
+        private: no
+
+    tasks:
+      - name: Add Extra Packages (epel) repo to all machines
+        command: yum install -y epel-release
+
+      - name: Enable the epel repo on all machines
+        command: yum config-manager --set-enabled epel
+      
+      - name: Install sshpass on all machines
+        command: yum install -y sshpass
+
+      - name: "Make a dev user on puppet1 named {{ puppet1dev }}"
+        command: "adduser {{ puppet1dev }}"
+        when: inventory_hostname == "puppet1"
+      
+      - name: "Set {{ puppet1dev }} password"
+        command: "echo -e '{{ puppet1devpass }}\n{{ puppet1devpass }}' | passwd --stdin {{ puppet1dev }}"
+        when: inventory_hostname  == "puppet1"
+
+      - name: "Make a dev user on puppet2 name {{ puppet2dev }}"
+        command: "adduser {{ puppet2dev }}"
+        when: inventory_hostname == "puppet2"
+
+      - name: "Set {{ puppet2dev }} password"
+        command: "echo -e '{{ puppet2devpass }}\n{{ puppet2devpass }}' | passwd --stdin {{ puppet2dev }}"
+        when: inventory_hostname == "puppet2"
+
+  - hosts: puppets
+    tasks:
+      - name: Reboot puppets for changes to take effect
+        reboot:   
