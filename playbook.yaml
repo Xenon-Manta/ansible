@@ -65,7 +65,7 @@
         when: inventory_hostname == "puppet1"
       
       - name: "Set {{ puppet1dev }} password"
-        command: "echo -e '{{ puppet1devpass }}\n{{ puppet1devpass }}' | passwd --stdin {{ puppet1dev }}"
+        command: "echo -e '{{ puppet1devpass }}\n{{ puppet1devpass }}' | passwd {{ puppet1dev }}"
         when: inventory_hostname  == "puppet1"
 
       - name: "Make a dev user on puppet2 name {{ puppet2dev }}"
@@ -73,7 +73,7 @@
         when: inventory_hostname == "puppet2"
 
       - name: "Set {{ puppet2dev }} password"
-        command: "echo -e '{{ puppet2devpass }}\n{{ puppet2devpass }}' | passwd --stdin {{ puppet2dev }}"
+        command: "echo -e '{{ puppet2devpass }}\n{{ puppet2devpass }}' | passwd {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
 
   - hosts: puppets
