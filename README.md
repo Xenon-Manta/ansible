@@ -10,7 +10,6 @@
 4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
 
-<img src="https://az686452.vo.msecnd.net/t-10048-wubble/6aef7b1ec99d439597d03fc88963548c/i/6ceb2e6c-99b7-495f-aa21-17a4813deaf5.png" alt="Instructions" width="250"></img>
 ### Recommended Seequence of Actions:
 1. copy ansibleInstall.sh onto target Cent OS 8 VM
 1.a. vim ansibleInstall.sh and see what it is you are about to run
@@ -23,4 +22,4 @@
 7. troubleshoot all errors
 
 ****Note: I added my gitPlaybook.yaml just as another use case. This is an example of automating even code updates.
-![](https://cdn.dribbble.com/users/1304577/screenshots/4032985/kiiwik-app-_03.gif)
+<img src="http://cdn2.hubspot.net/hub/293166/images/gothic%20dreams%20cthulhu%20the%20chase.jpg" alt="cthulu" width="350"></img>
