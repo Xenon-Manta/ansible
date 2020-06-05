@@ -13,12 +13,12 @@
 
 ### Recommended Sequence of Actions:
 1. copy ansibleInstall.sh onto target Cent OS 8 VM
-1.a. vim ansibleInstall.sh and see what it is you are about to run
+* vim ansibleInstall.sh and see what it is you are about to run
 2. chmod +x ansibleInstall.sh
 3. After you understand it, run ./ansibleInstall.sh
 4. copy playbook.yaml onto target control Cent OS 8 VM in your home directory
 5. copy hosts onto target control Cent OS 8 VM into /etc/ansible directory
-5.a. vim playbook.yaml and see what it is doing
+* vim playbook.yaml and see what it is doing
 6. After you understand playbook.yaml, run ansible-playbook playbook.yaml
 7. troubleshoot all errors
 
