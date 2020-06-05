@@ -3,12 +3,20 @@
 #Assumes remote origin and master are set
 #Assumes git-credential store is enabled and credentials to git are stored
   - hosts: control
+    vars:
+       gitComment: Updated
+    
+    vars_prompt:
+     - name: gitComment
+       prompt: Git commit comment
+       private: no
+
     tasks:
      - name: Add all files to git push
        shell: git add .
       
-     - name: Commit all files with the comment 'updated'
-       shell: git commit -m 'Updated'
+     - name: Commit all files with the comment you gave
+       shell: "git commit -m '{{ gitComment }}'"
       
      - name: Pull all new files from master
        shell: git pull origin master

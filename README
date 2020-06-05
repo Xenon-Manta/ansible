@@ -17,3 +17,5 @@ Recommended Seequence of Actions:
 5.a. vim playbook.yaml and see what it is doing
 6. After you understand playbook.yaml, run ansible-playbook playbook.yaml
 7. troubleshoot all errors
+
+****Note: I added my gitPlaybook.yaml just as another use case. This is the lazy way of updating git.
