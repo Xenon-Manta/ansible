@@ -1,6 +1,7 @@
 # ***Ansible Automation Scripts for CentOS 8***
 ### *by rob saffell*
 ![](https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png =100x)
+<img src="https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png" alt="drawing" width="200"/>
 ### **Important Notes:**
 1. By default Ansible checks /etc/ansible/hosts for the default hosts file
 1.a. I recommend putting hosts in /etc/ansible/
