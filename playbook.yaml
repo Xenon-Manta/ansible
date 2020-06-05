@@ -81,7 +81,7 @@
       - name: Delete this step.
         shell: echo -e "P@$$word1234\nP@$$word1234" | passwd
       
-      - name: Dete this step too
+      - name: Delete this step too
         shell: shutdown now
  
   - hosts: puppets
