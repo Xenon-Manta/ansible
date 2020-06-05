@@ -1,6 +1,6 @@
 ## Ansible Hosts File
 [control]
-usr1control ansible_host=10.0.0.101 ansible_ssh_pass='BHUbhuNJI' ansible_ssh_user='root'
+usr1control ansible_host=10.0.0.101 ansible_ssh_pass='ChangeMe1234' ansible_ssh_user='root'
 
 [puppets]
 puppet1 ansible_host=10.0.0.103 ansible_ssh_pass='ChangeMe1234' ansible_ssh_user='root'
