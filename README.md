@@ -10,7 +10,7 @@
 4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
 
-### Recommended Seequence of Actions:
+### Recommended Sequence of Actions:
 1. copy ansibleInstall.sh onto target Cent OS 8 VM
 1.a. vim ansibleInstall.sh and see what it is you are about to run
 2. chmod +x ansibleInstall.sh
