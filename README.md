@@ -22,5 +22,6 @@
 6. After you understand playbook.yaml, run ansible-playbook playbook.yaml
 7. troubleshoot all errors
 
-****Note: I added my gitPlaybook.yaml just as another use case. This is an example of automating even code updates.
+### ***Note: I added my gitPlaybook.yaml just as another use case.***
+### ***This is an example of automating even code updates.***
 <img src="http://cdn2.hubspot.net/hub/293166/images/gothic%20dreams%20cthulhu%20the%20chase.jpg" alt="cthulu" width="550"></img>
