@@ -2,11 +2,11 @@
 ### *by rob saffell*
 <img src="https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png" alt="Important" width="150"></img>
 ### **Important Notes:**
-1. By default Ansible checks /etc/ansible/hosts for the default hosts file
-1.a. I recommend changing the hosts IP addresses to reflect **your** network layout.
-1.b. I recommend **then** putting hosts in /etc/ansible/
+1. By default Ansible checks /etc/ansible/hosts for the default hosts file.
+  a. I recommend changing the hosts IP addresses to reflect **your** network layout.
+  b. I recommend **then** putting hosts in /etc/ansible/
 2. By default Ansible checks /etc/ansible/vars for default vars
-2.a. I did not use any default vars - this file is not required for this scenario, but you could create a file and define puppet vars there
+  a. I did not use any default vars - this file is not required for this scenario, but you could create a file and define puppet vars there
 3. The shell script installs ansible without any of the default files - if people install it differently, they may see different results
 4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
