@@ -10,6 +10,9 @@
       name: Commit all files with the comment 'updated'
       shell: git commit -m 'Updated'
       
+      name: Pull all new files from master
+      shell: git pull origin master
+      
       name: Push all files to remote
       shell: git push origin master
       
