@@ -1,0 +1,15 @@
+# A playbook to git commit and push - because typing commands is hard
+# Assumes remote origin and master are set
+# Assumes git-credential store is enabled and credentials to git are stored
+---
+  - hosts: control
+    tasks:
+      name: Add all files to git push
+      shell: git add .
+      
+      name: Commit all files with the comment 'updated'
+      shell: git commit -m 'Updated'
+      
+      name: Push all files to remote
+      shell: git push origin master
+      
