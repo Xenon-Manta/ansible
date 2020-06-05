@@ -1,6 +1,8 @@
-dnf update
+dnf -y install epel-release
 dnf -y install python3
 dnf -y install python3-pip
-echo "^(;,;)^" > /etc/motd
+dnf config-manager --set-enabled Power-Tools
+dnf install sshpass
+dnf update
 pip3 install ansible
-sh 1>/dev/null 2>/dev/null
+

@@ -75,14 +75,6 @@
       - name: "Set {{ puppet2dev }} password"
         shell: "echo -e '{{ puppet2devpass}}\n{{ puppet2devpass }}' | passwd {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
-
-  - hosts: control
-    tasks:
-      - name: Delete this step.
-        shell: echo -e "P@$$word1234\nP@$$word1234" | passwd
-      
-      - name: Delete this step too
-        shell: shutdown now
  
   - hosts: puppets
     tasks:
