@@ -61,22 +61,22 @@
         command: yum install -y sshpass
 
       - name: "Make a dev user on puppet1 named {{ puppet1dev }}"
-        command: "adduser {{ puppet1dev }}"
+        shell: "adduser {{ puppet1dev }}"
         when: inventory_hostname == "puppet1"
       
       - name: "Set {{ puppet1dev }} password"
-        command: "echo -e '{{ puppet1devpass }}\n{{ puppet1devpass }}' | passwd {{ puppet1dev }}"
+        shell: "echo -e '{{ puppet1devpass }}\n{{ puppet1devpass }}' | passwd {{ puppet1dev }}"
         when: inventory_hostname  == "puppet1"
 
       - name: "Make a dev user on puppet2 name {{ puppet2dev }}"
-        command: "adduser {{ puppet2dev }}"
+        shell: "adduser {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
 
       - name: "Set {{ puppet2dev }} password"
-        command: "echo -e '{{ puppet2devpass }}\n{{ puppet2devpass }}' | passwd {{ puppet2dev }}"
+        shell: "echo -e 'BHUbhuNJI\nBHUbhuNJI' | passwd {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
 
   - hosts: puppets
     tasks:
       - name: Reboot puppets for changes to take effect
-        reboot:   
+        shell: shutdown -r now  
