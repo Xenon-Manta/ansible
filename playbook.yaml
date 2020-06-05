@@ -73,7 +73,7 @@
         when: inventory_hostname == "puppet2"
 
       - name: "Set {{ puppet2dev }} password"
-        shell: "echo -e 'BHUbhuNJI\nBHUbhuNJI' | passwd {{ puppet2dev }}"
+        shell: "echo -e '{{ puppet2devpass}}\n{{ puppet2devpass }}' | passwd {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
 
   - hosts: puppets
