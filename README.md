@@ -1,6 +1,6 @@
 # ***Ansible Automation Scripts for CentOS 8***
-## *by rob saffell*
-
+### *by rob saffell*
+![](https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png)
 ### **Important Notes:**
 1. By default Ansible checks /etc/ansible/hosts for the default hosts file
 1.a. I recommend putting hosts in /etc/ansible/
@@ -10,6 +10,7 @@
 4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
 
+![](https://az686452.vo.msecnd.net/t-10048-wubble/6aef7b1ec99d439597d03fc88963548c/i/6ceb2e6c-99b7-495f-aa21-17a4813deaf5.png)
 ### Recommended Seequence of Actions:
 1. copy ansibleInstall.sh onto target Cent OS 8 VM
 1.a. vim ansibleInstall.sh and see what it is you are about to run
@@ -22,4 +23,4 @@
 7. troubleshoot all errors
 
 ****Note: I added my gitPlaybook.yaml just as another use case. This is an example of automating even code updates.
-![](https://ksr-ugc.imgix.net/assets/024/027/442/31aa2e1255a31091359dac4a90767db9_original.jpg?ixlib=rb-2.0.0&crop=faces&w=1552&h=873&fit=crop&v=1549618448&auto=format&frame=1&q=92&s=2365c84b1ae4159af66f87b9e5caf40f)
+![](https://cdn.dribbble.com/users/1304577/screenshots/4032985/kiiwik-app-_03.gif)
