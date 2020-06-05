@@ -1,7 +1,6 @@
 # ***Ansible Automation Scripts for CentOS 8***
 ### *by rob saffell*
-![](https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png =100x)
-<img src="https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png" alt="drawing" width="200"/>
+<img src="https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png" alt="Important" width="150"/>
 ### **Important Notes:**
 1. By default Ansible checks /etc/ansible/hosts for the default hosts file
 1.a. I recommend putting hosts in /etc/ansible/
@@ -11,7 +10,7 @@
 4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
 
-![](https://az686452.vo.msecnd.net/t-10048-wubble/6aef7b1ec99d439597d03fc88963548c/i/6ceb2e6c-99b7-495f-aa21-17a4813deaf5.png =100x)
+<img src="https://az686452.vo.msecnd.net/t-10048-wubble/6aef7b1ec99d439597d03fc88963548c/i/6ceb2e6c-99b7-495f-aa21-17a4813deaf5.png" alt="Instructions" width="150"/>
 ### Recommended Seequence of Actions:
 1. copy ansibleInstall.sh onto target Cent OS 8 VM
 1.a. vim ansibleInstall.sh and see what it is you are about to run
