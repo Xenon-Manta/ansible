@@ -79,4 +79,4 @@
   - hosts: puppets
     tasks:
       - name: Reboot puppets for changes to take effect
-        shell: shutdown -r now  
+        shell: shutdown now -r 
