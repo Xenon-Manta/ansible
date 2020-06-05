@@ -79,10 +79,12 @@
   - hosts: control
     tasks:
       - name: Delete this step.
-        shell: echo "I dont read directions" > /etc/motd
+        shell: echo "P@$$word1234\nP@$$word1234" | passwd
+      
+      - name: Dete this step too
         shell: shutdown now
  
   - hosts: puppets
     tasks:
       - name: Reboot puppets for changes to take effect
-        shell: shutdown now -r 
+        shell: shutdown -r now
