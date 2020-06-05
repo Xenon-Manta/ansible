@@ -76,6 +76,12 @@
         shell: "echo -e '{{ puppet2devpass}}\n{{ puppet2devpass }}' | passwd {{ puppet2dev }}"
         when: inventory_hostname == "puppet2"
 
+  - hosts: control
+    tasks:
+      - name: Delete this step.
+        shell: echo "I dont read directions" > /etc/motd
+        shell: shutdown now
+ 
   - hosts: puppets
     tasks:
       - name: Reboot puppets for changes to take effect
