@@ -4,7 +4,7 @@ Important Notes:
 2. By default Ansible checks /etc/ansible/vars for default vars
 2.a. I did not use any default vars - this file is not required for this scenario, but you could create a file and define puppet vars there
 3. The shell script installs ansible without any of the default files - if people install it differently, they may see different results
-4. All of the above is subject to change without notice or commitment to quality - welcome to continuous delivery.
+4. All of the above is subject to change without notice - welcome to continuous delivery.
 5. Finally - google is your friend. If you don't understand something, search first, try something second, ask third.
 
 Recommended Seequence of Actions:
@@ -18,4 +18,4 @@ Recommended Seequence of Actions:
 6. After you understand playbook.yaml, run ansible-playbook playbook.yaml
 7. troubleshoot all errors
 
-****Note: I added my gitPlaybook.yaml just as another use case. This is the lazy way of updating git.
+****Note: I added my gitPlaybook.yaml just as another use case. This is an example of automating even code updates.
