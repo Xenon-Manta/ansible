@@ -2,7 +2,7 @@
 ### *by rob saffell*
 <img src="https://cdn.pixabay.com/photo/2016/09/29/13/51/important-1702878_640.png" alt="Important" width="150"></img>
 ### **Important Notes:**
-1. By default Ansible checks <q>/etc/ansible/hosts</q> for the default hosts file.
+1. By default Ansible checks <code>/etc/ansible/hosts</code> for the default hosts file.
   * I recommend changing the host(s) IP addresses to reflect **your** network layout.
   * I recommend **then** putting hosts in /etc/ansible/
 2. By default Ansible checks /etc/ansible/vars for default vars
